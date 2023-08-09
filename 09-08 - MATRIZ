@@ -1,0 +1,24 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro mat[3][3], i, j 
+		escreva("Leitura da matriz\n")
+		para(j=0; j<3; j++){
+			para(i=0; i<3; i++){
+				escreva("Digite um valor para ", i+1, " ", j+1,": ")
+				leia(mat[i][j])
+			}
+		}
+		escreva("\nEscrita da Matriz\n")
+		para(j=0; j<3; j++){
+			para(i=0; i<3; i++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+	}
+}
+
+==============================================================================================================
