@@ -54,3 +54,52 @@ programa
 }
 
 ==============================================================================================================
+
+CRIAR DUAS MATRIZES E SOMÁ-LAS, GERANDO UMA TERCEIRA MATRIZ
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro mat1[3][3], i, j, mat2[3][3], mat3[3][3]
+		escreva("Leitura da primeira matriz\n")
+		para(j=0; j<3; j++){
+			para(i=0; i<3; i++){
+				escreva("Digite um valor para ", i+1, " ", j+1,": ")
+				leia(mat1[i][j])
+			}
+		}
+		escreva("\nEscrita da Matriz\n")
+		para(j=0; j<3; j++){
+			para(i=0; i<3; i++){
+				escreva(mat1[i][j], " ")
+			}
+			escreva("\n")
+		}
+
+		escreva("\nLeitura da segunda matriz\n")
+		para(j=0; j<3; j++){
+			para(i=0; i<3; i++){
+				escreva("Digite um valor para ", i+1, " ", j+1,": ")
+				leia(mat2[i][j])
+			}
+		}
+		escreva("\nEscrita da Matriz\n")
+		para(j=0; j<3; j++){
+			para(i=0; i<3; i++){
+				escreva(mat2[i][j], " ")
+			}
+			escreva("\n")
+		}
+
+		escreva("\nMatriz resultante da soma das duas outras\n")
+		para(j=0; j<3; j++){
+			para(i=0; i<3; i++){
+				mat3[i][j] = mat1[i][j] + mat2[i][j]
+				escreva(mat3[i][j], " ")
+			}
+			escreva("\n")
+		}
+	}
+}
