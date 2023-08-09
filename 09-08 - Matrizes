@@ -1,3 +1,5 @@
+CRIAR UMA MATRIZ 3x3
+
 programa
 {
 	
@@ -18,6 +20,36 @@ programa
 			}
 			escreva("\n")
 		}
+	}
+}
+
+==============================================================================================================
+
+LER A SOMA DOS ELEMENTOS DA MATRIZ 3x3
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro mat[3][3], i, j, soma
+		soma = 0
+		escreva("Leitura da matriz\n")
+		para(j=0; j<3; j++){
+			para(i=0; i<3; i++){
+				escreva("Digite um valor para ", i+1, " ", j+1,": ")
+				leia(mat[i][j])
+				soma = soma + mat[i][j]
+			}
+		}
+		escreva("\nEscrita da Matriz\n")
+		para(j=0; j<3; j++){
+			para(i=0; i<3; i++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+		escreva("\nA soma dos elementos da matriz é: ", soma)
 	}
 }
 
