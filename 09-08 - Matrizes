@@ -7,15 +7,15 @@ programa
 	{
 		inteiro mat[3][3], i, j 
 		escreva("Leitura da matriz\n")
-		para(j=0; j<3; j++){
-			para(i=0; i<3; i++){
+		para(i=0; i<3; i++){
+			para(j=0; j<3; j++){
 				escreva("Digite um valor para ", i+1, " ", j+1,": ")
 				leia(mat[i][j])
 			}
 		}
 		escreva("\nEscrita da Matriz\n")
-		para(j=0; j<3; j++){
-			para(i=0; i<3; i++){
+		para(i=0; i<3; i++){
+			para(j=0; j<3; j++){
 				escreva(mat[i][j], " ")
 			}
 			escreva("\n")
@@ -35,16 +35,16 @@ programa
 		inteiro mat[3][3], i, j, soma
 		soma = 0
 		escreva("Leitura da matriz\n")
-		para(j=0; j<3; j++){
-			para(i=0; i<3; i++){
+		para(i=0; i<3; i++){
+			para(j=0; j<3; j++){
 				escreva("Digite um valor para ", i+1, " ", j+1,": ")
 				leia(mat[i][j])
 				soma = soma + mat[i][j]
 			}
 		}
 		escreva("\nEscrita da Matriz\n")
-		para(j=0; j<3; j++){
-			para(i=0; i<3; i++){
+		para(i=0; i<3; i++){
+			para(j=0; j<3; j++){
 				escreva(mat[i][j], " ")
 			}
 			escreva("\n")
@@ -64,42 +64,71 @@ programa
 	{
 		inteiro mat1[3][3], i, j, mat2[3][3], mat3[3][3]
 		escreva("Leitura da primeira matriz\n")
-		para(j=0; j<3; j++){
-			para(i=0; i<3; i++){
+		para(i=0; i<3; i++){
+			para(j=0; j<3; j++){
 				escreva("Digite um valor para ", i+1, " ", j+1,": ")
 				leia(mat1[i][j])
 			}
 		}
 		escreva("\nEscrita da Matriz\n")
-		para(j=0; j<3; j++){
-			para(i=0; i<3; i++){
+		para(i=0; i<3; i++){
+			para(j=0; j<3; j++){
 				escreva(mat1[i][j], " ")
 			}
 			escreva("\n")
 		}
 
 		escreva("\nLeitura da segunda matriz\n")
-		para(j=0; j<3; j++){
-			para(i=0; i<3; i++){
+		para(i=0; i<3; i++){
+			para(j=0; j<3; j++){
 				escreva("Digite um valor para ", i+1, " ", j+1,": ")
 				leia(mat2[i][j])
 			}
 		}
 		escreva("\nEscrita da Matriz\n")
-		para(j=0; j<3; j++){
-			para(i=0; i<3; i++){
+		para(i=0; i<3; i++){
+			para(j=0; j<3; j++){
 				escreva(mat2[i][j], " ")
 			}
 			escreva("\n")
 		}
 
 		escreva("\nMatriz resultante da soma das duas outras\n")
-		para(j=0; j<3; j++){
-			para(i=0; i<3; i++){
+		para(i=0; i<3; i++){
+			para(j=0; j<3; j++){
 				mat3[i][j] = mat1[i][j] + mat2[i][j]
 				escreva(mat3[i][j], " ")
 			}
 			escreva("\n")
 		}
+	}
+}
+
+==============================================================================================================
+
+CRIAR UMA MATRIZ 5x5 E MOSTRAR A DIAGONAL PRINCIPAL
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro mat[5][5], i, j 
+		escreva("Leitura da matriz\n")
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				escreva("Digite um valor para ", i+1, " ", j+1,": ")
+				leia(mat[i][j])
+			}
+		}
+		escreva("\nEscrita da Matriz\n")
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+
+		escreva("\nA diagonal principal é\n", mat[0][0], " ", mat[1][1], " ", mat[2][2], " ", mat[3][3], " ", mat[4][4])
 	}
 }
