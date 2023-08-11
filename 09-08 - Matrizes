@@ -129,6 +129,12 @@ programa
 			escreva("\n")
 		}
 
-		escreva("\nA diagonal principal é\n", mat[0][0], " ", mat[1][1], " ", mat[2][2], " ", mat[3][3], " ", mat[4][4])
+		escreva("\nDiagonal principal\n")
+		para(i=0; i<5; i++){
+			escreva(mat[i][i], " ")
+		}
+
+		// OU 
+		// escreva("\nA diagonal principal é\n", mat[0][0], " ", mat[1][1], " ", mat[2][2], " ", mat[3][3], " ", mat[4][4])
 	}
 }
