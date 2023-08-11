@@ -1,4 +1,4 @@
-CRIAR UMA MATRIZ 3x3
+1. CRIAR UMA MATRIZ 3x3
 
 programa
 {
@@ -25,7 +25,7 @@ programa
 
 ==============================================================================================================
 
-LER A SOMA DOS ELEMENTOS DA MATRIZ 3x3
+2. LER A SOMA DOS ELEMENTOS DA MATRIZ 3x3
 
 programa
 {
@@ -55,7 +55,7 @@ programa
 
 ==============================================================================================================
 
-CRIAR DUAS MATRIZES E SOMÁ-LAS, GERANDO UMA TERCEIRA MATRIZ
+3. CRIAR DUAS MATRIZES E SOMÁ-LAS, GERANDO UMA TERCEIRA MATRIZ
 
 programa
 {
@@ -106,7 +106,7 @@ programa
 
 ==============================================================================================================
 
-CRIAR UMA MATRIZ 5x5 E MOSTRAR A DIAGONAL PRINCIPAL
+4. CRIAR UMA MATRIZ 5x5 E MOSTRAR A DIAGONAL PRINCIPAL
 
 programa
 {
@@ -141,7 +141,7 @@ programa
 
 ==============================================================================================================
 
-CRIAR UMA MATRIZ 5x5 E MOSTRAR A DIAGONAL SECUNDÁRIA
+5. CRIAR UMA MATRIZ 5x5 E MOSTRAR A DIAGONAL SECUNDÁRIA
 
 programa
 {
