@@ -169,3 +169,46 @@ programa
 		
 	}
 }
+
+==============================================================================================================
+
+6. MATRIZ 3x4 E MOSTRAR A SOMA TODOS OS ÍMPARES, A SOMA DAS LINHAS E A SOMA DAS COLUNAS
+
+programa
+{
+
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro mat[3][4], i, j, soma, lin, col
+		soma = 0
+		lin = 0
+		col = 0
+		escreva("Leitura da matriz\n")
+		para(i=0; i<3; i++){
+			para(j=0; j<4; j++){
+				mat[i][j] = u.sorteia(0, 10)
+			}
+		}
+		escreva("\nEscrita da Matriz\n")
+		para(i=0; i<3; i++){
+			para(j=0; j<4; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+		para(i=0; i<3; i++){
+			para(j=0; j<4; j++){
+				se(mat[i][j] % 2 != 0){
+					soma = soma + mat[i][j]
+				}
+			}
+		}
+		para(i=0; i<3; i++){
+			para(j=0; j<4; j++){
+				
+			}
+		}
+	}
+}
