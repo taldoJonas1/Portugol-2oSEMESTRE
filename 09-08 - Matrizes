@@ -154,7 +154,7 @@ programa
 		escreva("Leitura da matriz\n")
 		para(i=0; i<5; i++){
 			para(j=0; j<5; j++){
-				mat[i][j] = u.sorteia(0, 69)
+				mat[i][j] = u.sorteia(0, 10)
 			}
 		}
 		escreva("\nEscrita da Matriz\n")
