@@ -138,3 +138,37 @@ programa
 		// escreva("\nA diagonal principal é\n", mat[0][0], " ", mat[1][1], " ", mat[2][2], " ", mat[3][3], " ", mat[4][4])
 	}
 }
+
+==============================================================================================================
+
+CRIAR UMA MATRIZ 5x5 E MOSTRAR A DIAGONAL SECUNDÁRIA
+
+programa
+{
+
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro mat[5][5], i, j 
+		escreva("Leitura da matriz\n")
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				mat[i][j] = u.sorteia(0, 69)
+			}
+		}
+		escreva("\nEscrita da Matriz\n")
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+
+		escreva("\nDiagonal secundária\n")
+		para(i=0; i<5; i++){
+			escreva(mat[i][4 - i], " ")
+		}	
+		
+	}
+}
