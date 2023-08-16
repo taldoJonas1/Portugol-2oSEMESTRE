@@ -176,15 +176,12 @@ programa
 
 programa
 {
-
 	inclua biblioteca Util --> u
+
 	
 	funcao inicio()
 	{
-		inteiro mat[3][4], i, j, soma, lin, col
-		soma = 0
-		lin = 0
-		col = 0
+		inteiro mat[3][4], i, j, somaA=0, somaB[4], somaC[3], somaColuna = 0
 		escreva("Leitura da matriz\n")
 		para(i=0; i<3; i++){
 			para(j=0; j<4; j++){
@@ -201,14 +198,30 @@ programa
 		para(i=0; i<3; i++){
 			para(j=0; j<4; j++){
 				se(mat[i][j] % 2 != 0){
-					soma = soma + mat[i][j]
+					somaA = somaA + mat[i][j]
 				}
+			}
+		}
+		para(j=0; j<4; j++){
+			para(i=0; i<3; i++){
+				somaB[j] = somaB[j] + mat[i][j]
 			}
 		}
 		para(i=0; i<3; i++){
 			para(j=0; j<4; j++){
-				
+				somaC[i] = somaC[i] + mat[i][j]
 			}
+		}
+		
+		escreva("\nRespostas\n")
+		escreva("\na) Soma dos ímpares\n", somaA)
+		escreva("\n\nb) Soma das Colunas")
+		para(j = 0; j < 4; j++){
+			escreva("\n", somaB[j])
+		}
+		escreva("\n\nc) Soma das Linhas")
+		para(i = 0; i < 4; i++){
+			escreva("\n", somaC[i])
 		}
 	}
 }
