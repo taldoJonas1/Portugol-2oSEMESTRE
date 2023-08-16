@@ -148,7 +148,6 @@ programa
 	funcao inicio()
 	{
 		inteiro mat[5][5], i, j 
-		escreva("Leitura da matriz\n")
 		para(i=0; i<5; i++){
 			para(j=0; j<5; j++){
 				mat[i][j] = u.sorteia(0, 10)
@@ -182,7 +181,6 @@ programa
 	funcao inicio()
 	{
 		inteiro mat[3][4], i, j, somaA=0, somaB[4], somaC[3], somaColuna = 0
-		escreva("Leitura da matriz\n")
 		para(i=0; i<3; i++){
 			para(j=0; j<4; j++){
 				mat[i][j] = u.sorteia(0, 10)
@@ -224,4 +222,46 @@ programa
 			escreva("\n", somaC[i])
 		}
 	}
+}
+
+==============================================================================================================
+
+7. CRIAR UMA MATRIZ 5x5 E TROCAR A SEGUNDA E A QUARTA LINHA
+
+programa
+{
+
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro mat[5][5], i, j, aux
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				mat[i][j] = u.sorteia(0, 9)
+			}
+		}
+		
+		escreva("\nMatriz Original\n")
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+
+		para(j=0; j<5; j++){
+			aux = mat[1][j]
+			mat[1][j] = mat[3][j]
+			mat[3][j] = aux
+		}
+		
+		escreva("\nMatriz com as linhas 2 e 4 invertidas\n")
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+	}	
 }
