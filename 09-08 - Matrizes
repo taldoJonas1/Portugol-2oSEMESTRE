@@ -265,3 +265,126 @@ programa
 		}
 	}	
 }
+
+==============================================================================================================
+
+8. MATRIZ 10x10 E MOSTRAR O MAIORA ELEMENTO DE CADA LINDA E DE CADA COLUNA
+
+programa
+{
+	inclua biblioteca Util --> u
+
+	
+	funcao inicio()
+	{
+		inteiro mat[10][10], i, j, maior[10], menor[10], auxMaior = 0, auxMenor = 0
+		para(i=0; i<10; i++){
+			para(j=0; j<10; j++){
+				mat[i][j] = u.sorteia(0, 9)
+			}
+		}
+		escreva("\nEscrita da Matriz\n")
+		para(i=0; i<10; i++){
+			para(j=0; j<10; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+		para(i=0;i<10;i++){
+			auxMaior=mat[i][0]
+			para(j=0;j<10;j++){
+				se(mat[i][j]>auxMaior){
+					auxMaior = mat[i][j]
+				}
+			}
+			maior[i]=auxMaior
+		}
+		
+		
+		para(j=0;j<10;j++){
+			auxMenor=mat[0][j]
+			para(i=0;i<10;i++){
+				se(mat[i][j]<auxMenor){
+					auxMenor=mat[i][j]
+				}
+			}
+			menor[j]=auxMenor
+		}
+		escreva("\nMaiores elementos por linha:\n")
+		para(i=0;i<10;i++){
+			escreva("\nMaior elemento da linha ",i+1," = ", maior[i])
+		}
+		escreva("\n\nMenores elementos por coluna:\n")
+		para(j=0;j<10;j++){
+			escreva("\nMenor elemento da coluna ",j+1," = ", menor[j])
+		}
+	}
+}
+
+==============================================================================================================
+
+9. MATRIZ 5x5 E INVERTER ALGUMAS LINHAS COLUNAS E DIAGONAIS
+
+programa
+{
+
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro mat[5][5], i, j, aux
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				mat[i][j] = u.sorteia(0, 9)
+			}
+		}
+		
+		escreva("\nMatriz Original\n")
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+
+		para(j=0; j<5; j++){
+			aux = mat[1][j]
+			mat[1][j] = mat[4][j]
+			mat[4][j] = aux
+		}
+		
+		escreva("\na)Matriz com as linhas 2 e 5 invertidas\n")
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+		para(i=0; i<5; i++){
+			aux = mat[i][0]
+			mat[i][0] = mat[i][3]
+			mat[i][3] = aux
+		}
+		
+		escreva("\nb)Matriz com as colunas 1 e 4 invertidas\n")
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+		para(i=0; i<5; i++){
+			aux = mat[i][i]
+			mat[i][i] = mat[i][4-i]
+			mat[i][4-i] = aux
+			
+		}
+		escreva("\nc)Matriz com as diagonais principal e secundária invertidas\n")
+		para(i=0; i<5; i++){
+			para(j=0; j<5; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+	}	
+}
