@@ -43,3 +43,29 @@ programa
 }
 
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro x
+		cadeia y
+		escreva("Insira o valor de x: ")
+		leia(x)
+		y = div(x)
+		escreva(y)
+	}
+	funcao cadeia div(inteiro x){
+		cadeia result
+		se(x % 6 == 0){
+			result = "É DIVISÍVEL POR 6"
+		}
+		senao{
+			result = "NÃO É DIVISÍVEL POR 6"
+		}
+		retorne result
+	}
+}
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
