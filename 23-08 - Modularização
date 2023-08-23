@@ -22,3 +22,24 @@ programa
 }
 
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro a, b, s
+		a = 4
+		b = 9
+		s = soma(a, b)
+		escreva("Soma = ", s, "\n")
+	}
+	
+	funcao inteiro soma(inteiro x, inteiro y){
+		inteiro result
+		 result = x+y
+		 retorne result
+	}
+}
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
