@@ -78,6 +78,30 @@ programa
 
 3. CALCULAR O QUOCIENTE INTEIRO DA DIVISAO ENTRE DOIS NROS, SEM UTILIZAR OPERADOR DIV
 
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro A, B, N
+		escreva("Insira o dividendo: ")
+		leia(A)
+		escreva("Agora insira o divisor: ")
+		leia(B)
+		N = div(A, B)
+		escreva("Resultado da divisão sem o resto: ",N)
+	}
+
+	funcao inteiro div(inteiro A, inteiro B){
+		inteiro cont=0
+		enquanto(A>=B){
+			cont++
+			A = A - B
+		}
+		retorne cont
+	}
+}
+
 ==================================================================================================
 
 4. CALCULAR O FATORIAL DE UM NRO
