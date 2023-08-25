@@ -105,3 +105,24 @@ programa
 ==================================================================================================
 
 4. CALCULAR O FATORIAL DE UM NRO
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro N, X
+		escreva("Entre com um nro: ")
+		leia(N)
+		X = fat(N)
+		escreva(N,"! = ", X)
+	}
+	funcao inteiro fat(inteiro N){
+		inteiro fatorial = 1
+		enquanto(N>0){
+		fatorial = fatorial * N
+		N--
+		}
+		retorne fatorial
+	}
+}
