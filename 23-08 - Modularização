@@ -72,11 +72,7 @@ programa
 
 ==================================================================================================
 
-2. VERIFICAR SE O NRO É PRIMO OU NÃO
-
-==================================================================================================
-
-3. CALCULAR O QUOCIENTE INTEIRO DA DIVISAO ENTRE DOIS NROS, SEM UTILIZAR OPERADOR DIV
+2. CALCULAR O QUOCIENTE INTEIRO DA DIVISAO ENTRE DOIS NROS, SEM UTILIZAR OPERADOR DIV
 
 programa
 {
@@ -104,7 +100,7 @@ programa
 
 ==================================================================================================
 
-4. CALCULAR O FATORIAL DE UM NRO
+3. CALCULAR O FATORIAL DE UM NRO
 
 programa
 {
