@@ -122,3 +122,34 @@ programa
 		retorne fatorial
 	}
 }
+
+==================================================================================================
+
+4. Fazer um subprograma que receba, por parâmetro, a hora de início e a hora de término de um jogo, ambas subdivididas
+em 2 valores distintos: horas e minutos. O subprograma deve retornar a duração do jogo em minutos, considerando que o 
+tempo máximo de duração de um jogo é de 24 horas e que o jogo pode começar em um dia e terminar no outro.
+
+programa
+{
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro h1, h2, min1, min2, dur
+		h1 = u.sorteia(1, 4)
+		min1 = u.sorteia(0, 59)
+		escreva("\nHORA DE INÍCIO\n", h1,":",min1)
+		h2 = u.sorteia(5, 8)
+		min2 = u.sorteia(0, 59)
+		escreva("\n\nHORA DE TÉRMINO\n", h2,":",min2)
+		dur = duracao(h1, h2, min1, min2)
+		escreva("\n\nO jogo durou um total de ", dur," minutos.")
+	}
+	funcao inteiro duracao(inteiro h1, inteiro h2, inteiro min1, inteiro min2){
+		inteiro i = 0, t = 0, d
+		i = h1*60 + min1
+		t = h2*60 + min2
+		d = t - i
+		retorne d
+	}
+}
