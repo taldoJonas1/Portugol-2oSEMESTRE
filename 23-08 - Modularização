@@ -153,3 +153,47 @@ programa
 		retorne d
 	}
 }
+
+==================================================================================================
+
+5.
+
+programa
+{
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro mat[20][20], i, j, x, y
+		
+		para(i=0; i<20; i++){
+			para(j=0; j<20; j++){
+				mat[i][j] = u.sorteia(10, 99)
+			}
+		}
+		escreva("\nEscrita da Matriz\n")
+		para(i=0; i<20; i++){
+			para(j=0; j<20; j++){
+				escreva(mat[i][j], " ")
+			}
+			escreva("\n")
+		}
+		para(i=0;i<5;i++){
+			escreva("\nInforme um nro.\n")
+			leia(x)
+			y = busca(mat, x)
+			escreva(y)
+		}
+	}
+	funcao inteiro busca(inteiro mat[][], inteiro x){
+		inteiro result, i, j
+			para(i=0; i<20; i++){
+				para(j=0; j<20; j++){
+					se(x == mat[i][j]){
+						retorne i
+					}
+				}
+			}
+		retorne -1	
+	}
+}
