@@ -1,0 +1,72 @@
+1. Fazer um algoritmo para corrigir provas de múltipla escolha de uma turma de 40 alunos. Cada prova tem 5 questões, sendo que cada questão vale dois pontos. Além da leitura dos dados dos
+alunos (nome e respostas das questões), deve ser lido o gabarito para a correção da prova. O algoritmo deverá calcular e imprimir a menor nota, a maior nota, a média da turma, a
+quantidade de alunos com nota acima da média da turma, e a porcentagem de alunos aprovados, sabendo-se que a nota mínima de aprovação é 7,0. Utilizar matriz para armazenar as respostas
+dos alunos.
+
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia nomes[40]
+		inteiro i, j, opcao, alunosAM = 0
+		caracter gabarito[5], respostas[40][5]
+		real nota[40], notas = 0.0, somaNotas = 0.0, mediaNotas = 0.0, notaMaior = 0.0, notaMenor = 10.0, pct = 0.0, alunosAP = 0.0
+ 
+ 			
+ 			escreva("\n========== GABARITO ==========\n")
+			para(j=0; j<5; j++){
+				escreva("Resposta da questão ", j+1, "(LETRAS MAIÚSCULAS DE 'A' A 'E'): ")
+				leia(gabarito[j])
+				enquanto(gabarito[j] != 'A' e gabarito[j] != 'B' e gabarito[j] != 'C' e gabarito[j] != 'D' e gabarito[j] != 'E'){
+					escreva("Resposta da inválida, APENAS LETRAS MAIÚSCULAS DE 'A' A 'E': ")
+					leia(gabarito[j])
+				}
+			}
+
+			
+			escreva("\n===== INSERINDO RESPOSTAS ====\n")
+				para(i=0; i<40; i++){
+					escreva("Digite o nome do aluno ", i+1, ": ")
+					leia(nomes[i])
+					notas = 0.0
+					para(j=0; j<5; j++){
+						escreva("Digite sua resposta da questão ", i+1,"(LETRAS MAIÚSCULAS DE 'A' A 'E'): ")
+						leia(respostas[i][j])
+						enquanto(respostas[i][j] != 'A' e respostas[i][j] != 'B' e respostas[i][j] != 'C' e respostas[i][j] != 'D' e respostas[i][j] != 'E'){
+							escreva("Resposta da inválida, APENAS LETRAS MAIÚSCULAS DE 'A' A 'E': ")
+							leia(respostas[i][j])
+						}
+						se(respostas[i][j] == gabarito[j]){
+							notas = notas + 2.0
+						}
+						nota[i] = notas
+						somaNotas = somaNotas + notas
+						mediaNotas = somaNotas / 40.0
+					}
+				}
+				para(i=0; i<4; i++){
+					se(notaMaior < nota[i]){
+						notaMaior = nota[i]
+					}
+					se(notaMenor > nota[i]){
+						notaMenor = nota[i]
+					}
+					se(nota[i] > mediaNotas){
+						alunosAM++
+					}
+					se(nota[i] >= 7.0){
+						alunosAP++
+					}
+					pct = alunosAP / 40.0
+				}
+			
+			
+			
+				escreva("\n====== EXIBIR RESULTADOS =====\n")
+				escreva("Menor nota: ", notaMenor)
+				escreva("\nMaior nota: ", notaMaior)
+				escreva("\nQuantidade de alunos com nota acima da média da turma: ", alunosAM)
+				escreva("\nPorcentagem de alunos aprovados: ", pct*100.0, "%")
+	}
+}
